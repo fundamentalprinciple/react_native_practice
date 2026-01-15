@@ -10,8 +10,8 @@ const RootLayout = () => {
     return (
             <>
             <StatusBar value="auto" />
-            <Stack screenOptions={{
-                headerStyle: { backgroundColor: theme.navBackground },
+            <Stack  screenOptions={{
+                headerStyle: {  backgroundColor: theme.navBackground },
                 headerTintColor: theme.title,
                 
             }}>

@@ -1,23 +1,19 @@
-import { StyleSheet, Text, View, Image, useColorScheme } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import { Link } from 'expo-router' 
-import { Colors } from '../constants/Colors'
-
+import ThemedView from '../components/ThemedView'
 import Photo from '../assets/img/photo.png'
 
 const Home = () => {
-    const colorScheme = useColorScheme();
-    const theme = Colors[colorScheme] ?? Colors.light 
-   
     return (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
-            <Text style={[styles.title, { color: theme.text }]}>Home</Text>
-            <Text style={[{ marginTop: 10, marginBottom: 30}, { color: theme.text }]}>This is a cross platform app</Text>
+        <ThemedView style={[styles.container]}>
+            <Text style={[styles.title]}>Home</Text>
+            <Text style={[{ marginTop: 10, marginBottom: 30}]}>This is a cross platform app</Text>
             <View style={styles.card}>
                <Text>Card from nested view</Text> 
             </View>
-            <Link style={[styles.link, { color: theme.iconColor, borderBottomColor: theme.iconColor }]} href="/about">About</Link>
-            <Link style={[styles.link, { color: theme.iconColor, borderBottomColor: theme.iconColor }]} href="/contact">Contact</Link>
-        </View>
+            <Link style={[styles.link]} href="/about">About</Link>
+            <Link style={[styles.link]} href="/contact">Contact</Link>
+        </ThemedView>
     )
 }
 
