@@ -6,7 +6,6 @@ import Photo from '../assets/img/photo.png'
 const Home = () => {
     return (
         <View style={styles.container}>
-            <Image source={Photo} style={styles.img}/>
             <Text style={[styles.title]}>Home</Text>
             <Text style={{ marginTop: 10, marginBottom: 30}}>This is a cross platform app</Text>
             <View style={styles.card}>
