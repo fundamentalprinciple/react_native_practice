@@ -16,4 +16,3 @@ const ThemedView = ({ style, ...props }) => {
 }
  
 export default ThemedView
-

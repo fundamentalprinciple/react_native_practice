@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Link } from 'expo-router' 
 import ThemedView from '../components/ThemedView'
-import Photo from '../assets/img/photo.png'
+import ThemedLogo from '../components/ThemedLogo'
+import Vector from '../assets/img/Vector.svg'
 
 const Home = () => {
     return (
         <ThemedView style={[styles.container]}>
-            <Text style={[styles.title]}>Home</Text>
+            <Vector width={120} height={120}/>
+	        <Text style={[styles.title]}>Home</Text>
             <Text style={[{ marginTop: 10, marginBottom: 30}]}>This is a cross platform app</Text>
             <View style={styles.card}>
                <Text>Card from nested view</Text> 
