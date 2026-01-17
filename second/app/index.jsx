@@ -1,20 +1,31 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Link } from 'expo-router' 
+
 import ThemedView from '../components/ThemedView'
-import ThemedLogo from '../components/ThemedLogo'
+import ThemedCard from '../components/ThemedCard'
+import ThemedText from '../components/ThemedText'
+
 import Vector from '../assets/img/Vector.svg'
+import Spacer from '../components/Spacer'
+
 
 const Home = () => {
     return (
         <ThemedView style={[styles.container]}>
             <Vector width={120} height={120}/>
-	        <Text style={[styles.title]}>Home</Text>
-            <Text style={[{ marginTop: 10, marginBottom: 30}]}>This is a cross platform app</Text>
-            <View style={styles.card}>
-               <Text>Card from nested view</Text> 
-            </View>
-            <Link style={[styles.link]} href="/about">About</Link>
-            <Link style={[styles.link]} href="/contact">Contact</Link>
+	        <ThemedText style={[styles.title]}>Home</ThemedText>
+            <Spacer height={20}/>
+
+            <ThemedText>This is cross platform app.</ThemedText>
+            <ThemedCard style={[styles.card]}>
+               <ThemedText>Card from nested view</ThemedText> 
+            </ThemedCard>
+            <Link style={[styles.link]} href="/about">
+                <ThemedText>About</ThemedText>
+            </Link>
+            <Link style={[styles.link]} href="/contact">
+                <ThemedText>Contact</ThemedText>
+            </Link>
         </ThemedView>
     )
 }

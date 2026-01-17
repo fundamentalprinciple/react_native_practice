@@ -1,8 +1,4 @@
 import { View, useColorScheme } from 'react-native'
-/*
-import {} from 'expo-router'
-import {} from 'expo-status-bar'
-*/
 import { Colors } from '../constants/Colors'
 
 const ThemedView = ({ style, ...props }) => {
@@ -10,7 +6,7 @@ const ThemedView = ({ style, ...props }) => {
     const theme = Colors[colorScheme] ?? Colors.light
     return (
         <View style={[{ backgroundColor: theme.background}, style]}
-            {...props}
+        {...props}
         />
     )
 }

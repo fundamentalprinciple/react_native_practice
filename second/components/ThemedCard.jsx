@@ -1,20 +1,21 @@
-import { StyleSheet, Text, View, useColorScheme } from 'react-native'
-import { Colors } from '../constant/Colors'
+import { StyleSheet, View, useColorScheme } from 'react-native'
+import { Colors } from '../constants/Colors'
 
-const ThemedView = ({ style, ...props }) => {
+const ThemedCard = ({ style, ...props }) => {
     const colorScheme = useColorScheme()
-    const theme = Colors{colorScheme} ?? Colors.light
+    const theme = Colors[colorScheme] ?? Colors.light
     
     return (
         <View 
             style={[{ backgroundColor: theme.uiBackground }, styles.card,
             style ]}
+            {...props}
         />
     )
 }
-export default ThemedView
+export default ThemedCard
 
-const style = StyleSheet.create({ 
+const styles = StyleSheet.create({ 
     card: {
         borderRadius: 5,
         padding: 20
