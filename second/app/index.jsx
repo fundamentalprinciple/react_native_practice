@@ -20,11 +20,11 @@ const Home = () => {
             <ThemedCard style={[styles.card]}>
                <ThemedText>Card from nested view</ThemedText> 
             </ThemedCard>
-            <Link style={[styles.link]} href="/about">
-                <ThemedText>About</ThemedText>
+            <Link style={[styles.link]} href="/login">
+                <ThemedText>Login</ThemedText>
             </Link>
-            <Link style={[styles.link]} href="/contact">
-                <ThemedText>Contact</ThemedText>
+            <Link style={[styles.link]} href="/register">
+                <ThemedText>Register</ThemedText>
             </Link>
         </ThemedView>
     )
