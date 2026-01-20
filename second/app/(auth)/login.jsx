@@ -25,12 +25,17 @@ const login = () => {
             </ThemedButton>
            
             <Spacer />
+            <Link href='/'>
+                <ThemedText style={{ textAlign: 'center' }}>
+                    Home
+                </ThemedText>
+            </Link> 
             <Link href='/register'>
                 <ThemedText style={{ textAlign: 'center' }}>
                     Register instead
                 </ThemedText>
             </Link>        
-    
+      
         </ThemedView>
     )
 }
