@@ -1,10 +1,11 @@
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text, TextInput } from 'react-native'
 import { Link } from 'expo-router'
 
 import ThemedView from '../../components/ThemedView'
 import ThemedText from '../../components/ThemedText'
 import Spacer from '../../components/Spacer'
 import ThemedButton from '../../components/ThemedButton'
+import ThemedTextInput from '../../components/ThemedTextInput'
 
 const login = () => {
     
@@ -19,6 +20,12 @@ const login = () => {
             <ThemedText title={true} style={styles.title}>
                 Login to your account 
             </ThemedText>
+
+            <ThemedTextInput 
+                placeholder="Email"
+                keyboardType="email-address" 
+                style={{ width:'80%', marginVertical: 20 }}
+            />
 
             <ThemedButton onPress={handleSubmit}>
                 <Text style={{ color: '#f2f2f2' }}>Login</Text>

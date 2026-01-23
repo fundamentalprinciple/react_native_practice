@@ -8,7 +8,6 @@ import ThemedText from '../components/ThemedText'
 import Vector from '../assets/img/Vector.svg'
 import Spacer from '../components/Spacer'
 
-
 const Home = () => {
     return (
         <ThemedView style={[styles.container]}>
